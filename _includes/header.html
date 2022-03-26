@@ -1,0 +1,12 @@
+<header class="site-header">
+    <ul class="row">
+        <li class="col-xs-12 col-md-2"><a href="/" class="internal"><img class="img-responsive" src="/images/logo.svg" width=128 alt="Azoth Logo"></a></li>
+        <li class="col-xs-12 col-md-10">
+            <ul class="menu">
+                <li {%if page.section=='documentation' %} class="active"{% endif %}><h2><a href="/documentation" class="internal">Documentation</a></h2></li>
+                <li {%if page.section=='blog' %} class="active"{% endif %}><h2><a href="/blog" class="internal">Blog</a></h2></li>
+                <li {%if page.section=='code' %} class="active"{% endif %}><h2><a href="/code" class="internal">Code</a></h2></li>
+            </ul>
+        </li>
+    </ul>
+</header>

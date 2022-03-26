@@ -1,0 +1,253 @@
+/*
+Fix issue with scrollbar causing jumping when going between pages.
+On larger screens, we use a trick to shift the html element by the scrollbar width
+so it stays "centered" where it was without the scrollbar.
+On smaller screens, that leaves noticaby more room on the left then right, so
+we don't do that. We just force the scrollbar.
+*/
+@media (min-width: 768px)
+{
+    html
+    {
+        margin-left: calc(100vw - 100%);
+        margin-right: 0;
+    }
+}
+@media (max-width: 767px)
+{
+    html
+    {
+        overflow-y: scroll;
+    }
+}
+
+body
+{
+    font-family: 'Fira Sans Condensed','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 20px;
+}
+
+pre
+{
+    margin-top: -.75em;
+    margin-bottom: 1em;
+}
+
+pre, pre code, code, .hljs
+{
+    font-family: 'Fira Mono',Menlo,Monaco,Consolas,'Courier New',monospace;
+    font-size: 18px; /* matches the visual size of the body font better */
+    line-height: 1.5;
+    background: #f8f8f8;
+}
+
+code
+{
+    border: 1px solid #eee;
+    color: #333;
+}
+
+pre code
+{
+    border: none;
+}
+
+.container
+{
+    max-width: 820px;
+}
+
+.site-header img
+{
+    margin: 0 auto 0 auto;
+}
+
+.blog-header hr
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.site-header ul,
+.blog-header ul
+{
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.site-header li,
+.blog-header li
+{
+    list-style-type: none;
+}
+
+.site-header .menu,
+.blog-header .menu
+{
+    text-align: center;
+}
+
+@media (min-width: 992px)
+{
+    .site-header .menu
+    {
+        margin-top: 2.5em;
+    }
+}
+
+.site-header .menu li,
+.blog-header .menu li
+{
+    display: inline-flex;
+}
+
+.site-header h2,
+.blog-header h2
+{
+    display: inline;
+    font-size: 22px;
+    font-weight: 400;
+    /* Spacing important for background of active item */
+    padding: 0.4em 0.6em;
+    margin: 0;
+}
+
+.site-header li.active h2,
+.blog-header li.active h2
+{
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+.logo-name
+{
+    font-family: 'Fira Sans Condensed','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.pitch
+{
+    font-size: 25px;
+}
+
+.pitch .logo-name
+{
+    font-weight: 600;
+}
+
+.site-footer
+{
+    margin: 3rem 0 1rem;
+    border-top: 2px solid #dedede;
+}
+
+.site-footer .legal
+{
+    text-align: center;
+    font-size: 14px;
+}
+
+.social-media-list
+{
+    padding: 0;
+    text-align: right;
+}
+
+.social-media-list li
+{
+    display: inline;
+    list-style-type: none;
+    font-size: 18px;
+    margin-left: 1ex;
+}
+
+header .meta
+{
+    font-size: 18px;
+}
+
+.h4, h4
+{
+    font-size: 22px;
+}
+
+@media print
+{
+    a[href].internal:after,
+    a[href].cited:after
+    {
+        content: none;
+    }
+}
+
+article, p, .page-nav, li
+{
+    line-height: 1.5em;
+}
+
+article, article p, article ul, article ol, .page-nav
+{
+    margin-bottom: 1.25em;
+}
+
+article p+ul, article p+ol
+{
+    margin-top: -0.75em;
+}
+
+article .meta
+{
+    color: #BCBCBC;
+}
+
+article .meta .pub-line, article .meta .topic-line
+{
+    text-transform: uppercase;
+}
+
+article .meta .published, article .meta .topics
+{
+    text-transform: none;
+}
+
+.page-nav
+{
+    border-top: 2px solid #dedede;
+    padding-top: 1em;
+    padding-left: 1ex;
+    padding-right: 1ex;
+    margin: 1.5em 0 -3rem 0;
+}
+
+.page-nav .previous, .page-nav .older
+{
+    display: block;
+    float: left;
+    margin-right: 2ex;
+    margin-bottom: 1em;
+}
+
+.page-nav .next, .page-nav .newer
+{
+    display: block;
+    float: right;
+    text-align: right;
+    margin-left: 2ex;
+    margin-bottom: 1em;
+}
+
+.nowrap
+{
+    white-space: nowrap;
+}
+
+.footnotes
+{
+    margin-top: 2em;
+    font-size: 18px;
+}
+
+/* footnotes shouldn't have space between them */
+.footnotes li p:last-child
+{
+    margin-bottom: 0;
+}

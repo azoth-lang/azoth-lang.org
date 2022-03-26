@@ -1,0 +1,26 @@
+# Site settings
+title: The Azoth Programming Language
+email: site-admin@azoth-lang.org
+description: > # this means to ignore newlines until "baseurl:"
+  Azoth will be a general-purpose language with high performance,
+  deterministic safe resource management, and guaranteed thread safety.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://azoth-lang.org" # the base hostname & protocol for your site
+twitter_username: AzothLang
+github_username: azoth-lang
+encoding: UTF-8
+repository: azoth-lang/azoth-lang.org
+
+# Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable: true # disable syntax hilighting server side
+incremental: false # still experimental and seems to be causing problems
+strict_front_matter: true
+
+# Exclude from processing.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
