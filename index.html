@@ -10,14 +10,13 @@ need to learn the lessons of history and give the language enough time to gel
 into a cohesive whole composed of orthogonal parts before locking in bad design.</q>
 &mdash; Jeff Walker, The Azoth Language Designer
 
-<code><pre>
-HelloWorld.az
-public main(console: mut Console) -> void
-  => console.write_line("Hello World!");
-</pre></code>
+<pre><code class="nohighlight hljs">HelloWorld.az
+<span class="hljs-keyword">public</span> <span class="hljs-title function_">main</span>(<span class="hljs-params">console: <span class="hljs-keyword">mut</span> <span class="hljs-type">Console</span></span>) -> <span class="hljs-built_in">void</span>
+  <span class="hljs-operator">=></span> console.write_line(<span class="hljs-string">"Hello World!"</span>);
+</code></pre>
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <p class=pitch><span class="logo-name">aƶoth</span> will be a
         general-purpose language.</p>
         <p>Flexible, extensible, correct, and Robust.</p>
@@ -29,80 +28,140 @@ public main(console: mut Console) -> void
 <div class="row">
     <div class="col-md-6">
         <h2>Ideal Uses</h2>
-        <ul>
-            <li><strong></strong>Concurrent and Parallel Programing</strong>:
-            structured concurrency and reference capabilities enable worry-free
-            concurrency and parallelism.</li>
-            <li><strong>Serverless Development</strong>: no startup time and
-            multiple entry points</li>
-            <li><strong>Correct and Robust Programs</strong>: design by
-            contract, error handling etc.</li>
-        </ul>
+        <strong>Concurrent and Parallel Programing</strong>
+        <p>structured concurrency and reference capabilities enable worry-free
+        concurrency and parallelism.</p>
+        <strong>Serverless Development</strong>
+        <p>no startup time and
+            multiple entry points</p>
+        <strong>Correct and Robust Programs</strong>
+        <p>design by
+            contract, error handling etc.</p>
     </div>
     <div class="col-md-6">
         <h2>Features</h2>
-        <ul>
-            <li>Reference Capabilities: also no global mutable state</li>
-            <li>Flexible Static Typing with Local Type Inference</li>
-            <li>Write Once, Compile to Anywhere</li>
-            <li>Structured Concurrency</li>
-            <li>Instant On: no startup overhead, almost immediately executing
-            entry point function</li>
-            <li>Multiple Entry Points: enable serverless, supported by dead code
-            elimination so each entry point gives compact executable.</li>
-            <li>guaranteed optimizations</li>
-            <li>asynchronous everywhere</li>
-            <li>Implicit Interfaces</li>
-            <li>Compile-Time Code Execution: user literals (can parse), </li>
-            <li>Optional Exception Specifications</li>
-            <li>Design by Contract</li>
-            <li>Null Safety: Fix the billion dollar mistake. All references
-            non-null by default with powerful null handling and null
-            coalescing</li>
-            <li>Paradigm Fusion: enables all different paradigms in a way that
-            fits together. Fuses OO, Functional, Structured Concurrency, Lang.
-            Oriented, Procedural, into a cohesive whole. Enable DDD, first class
-            functions, default to immutable, side-effects visible</li>
-            <li>Language-Oriented Programming</li>
-            <li>term? No Special features in libraries, anything the language
-            can do, a library can do. Not primitive types, operators that only
-            apply to built in and can't be overloaded. No literals for built in
-            types.</li>
-            <li>Package Management: not just about the language, it is about the
-            package eco-system. Packages are versioned with an extension of
-            semantic versioning but that can be disabled</li>
-            <li>Unsafe Code and C Interop: unsafe is there as an escape hatch
-            but is restricted so that libraries can be trusted to be free from
-            bugs due to unnecessary unsafe code.</li>
-            <li>Compact Executables: minimal runtime - GC and green-thread
-            manager. Dead code elimination. Apps can be single executables or
-            for multiple executable can be shipped with static shared
-            libraries.</li>
-        </ul>
+        <details>
+            <summary><strong>Paradigm Fusion</strong></summary>
+            <p>Enables all different paradigms in a way that fits together.
+            Fuses OO, Functional, Structured Concurrency, Lang. Oriented,
+            Procedural, into a cohesive whole. Enable DDD, first class
+            functions, default to immutable, side-effects visible.</p>
+        </details>
+        <details>
+            <summary><strong>Reference Capabilities</strong></summary>
+            <p>also no global mutable state</p>
+        </details>
+        <details>
+            <summary><strong>Flexible Static Typing with Local Type
+            Inference</strong></summary>
+        </details>
+        <details>
+            <summary><strong>Write Once, Compile to Anywhere</strong></summary>
+        </details>
+        <details>
+            <summary><strong>Structured Concurrency</strong></summary>
+        </details>
+        <details>
+            <summary><strong>Instant On</strong></summary>
+            <p>no startup overhead, almost immediately executing entry point
+            function</p>
+        </details>
+        <details>
+            <summary><strong>Multiple Entry Points</strong></summary>
+            <p>enable serverless, supported by dead code elimination so each
+            entry point gives compact executable.</p>
+        </details>
+        <details>
+            <summary><strong>Guaranteed Optimizations</strong></summary>
+        </details>
+        <details>
+            <summary><strong>Asynchronous Everywhere</strong></summary>
+        </details>
+        <details>
+            <summary><strong>Implicit Interfaces</strong></summary>
+        </details>
+        <details>
+            <summary><strong>Compile-Time Code Execution</strong></summary>
+            <p>user literals (can parse)</p>
+        </details>
+        <details>
+            <summary><strong>Optional Exception
+            Specifications</strong></summary>
+        </details>
+        <details>
+            <summary><strong>Design by Contract</strong></summary>
+        </details>
+        <details>
+            <summary><strong>Null Safety</strong></summary>
+            <p>Fix the billion dollar mistake. All references non-null by
+            default with powerful null handling and null coalescing</p>
+        </details>
+        <details>
+            <summary><strong>Language-Oriented Programming</strong></summary>
+        </details>
+        <details>
+            <summary><strong>term?</strong></summary>
+            <p>No Special features in libraries, anything the language can do, a
+            library can do. Not primitive types, operators that only apply to
+            built in and can't be overloaded. No literals for built in
+            types.</p>
+        </details>
+        <details>
+            <summary><strong>Package Management</strong></summary>
+            <p>not just about the language, it is about the package eco-system.
+            Packages are versioned with an extension of semantic versioning but
+            that can be disabled</p>
+        </details>
+        <details>
+            <summary><strong>Unsafe Code and C Interop</strong></summary>
+            <p>unsafe is there as an escape hatch but is restricted so that
+            libraries can be trusted to be free from bugs due to unnecessary
+            unsafe code.</p>
+        </details>
+        <details>
+            <summary><strong>Compact Executables</strong></summary>
+            <p>minimal runtime - GC and green-thread manager. Dead code
+            elimination. Apps can be single executables or for multiple
+            executable can be shipped with static shared libraries.</p>
+        </details>
     </div>
 </div>
 <div class="row">
     <div class="col-md-6">
         <h2>Other Uses</h2>
-        <ul>
-            <li>Web Development</li>
-            <li>Desktop Development</li>
-            <li>Full-stack Development: once web assembly supports GC can develop in Azoth on browser too. Concurrency features</li>
-            <li>Embedded</li>
-        </ul>
+        <details>
+            <summary><strong>Web Development</strong></summary>
+        </details>
+        <details>
+            <summary><strong>Desktop Development</strong></summary>
+        </details>
+        <details>
+            <summary><strong>Full-stack Development</strong></summary>
+            <p>once web assembly supports GC can develop in Azoth on browser too. Concurrency features</p>
+        </details>
+        <details>
+            <summary><strong>Embedded Systems</strong></summary>
+        </details>
     </div>
     <div class="col-md-6">
         <h2>Powerful Libraries</h2>
-        <ul>
-            <li>Units of Measure and Quantities: underlying type and units optional generic
-            parameters. Example <code>Length</code> is <code>Length[float64,
-            m]</code>. But <code>Length[int, year]</code> or
-            <code>Length[yds]</code> and <code>Length[int, yd]</code>. Can mix
-            these types. If multiply <code>Length[yd] * Length[m]</code> the
-            result is <code>Length[yd*m]</code>. Need to do a conversion to
-            <code>Length[m^2]</code></li>
-            <li>Structured Data: VSON, JSON, YAML, BSON, structure with different parsers</li>
-            <li>Embedded Queries: SQL like query as DSL</li>
-        </ul>
+        <details>
+            <summary><strong>Units of Measure and Quantities</strong></summary>
+            <p>underlying type and units optional generic
+                parameters. Example <code>Length</code> is <code>Length[float64,
+                m]</code>. But <code>Length[int, year]</code> or
+                <code>Length[yds]</code> and <code>Length[int, yd]</code>. Can mix
+                these types. If multiply <code>Length[yd] * Length[m]</code> the
+                result is <code>Length[yd*m]</code>. Need to do a conversion to
+                <code>Length[m^2]</code>.</p>
+        </details>
+        <details>
+            <summary><strong>Embedded Queries</strong></summary>
+            <p>SQL like query as DSL.</p>
+        </details>
+        <details>
+            <summary><strong>Structured Data</strong></summary>
+            <p>VSON, JSON, YAML, BSON, structure with different parsers.</p>
+        </details>
     </div>
 </div>
