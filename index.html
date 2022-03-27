@@ -1,25 +1,108 @@
 ---
 layout: master
 ---
+<q>Great language design is about getting many individual decisions correct and
+giving developers powerful tools without so much rope that they can hang each
+other. Most languages are marred by poor decisions or foot-guns like monkey
+patching or arbitrary operator overloading. All the elements for a great
+language are now in place and common patterns are becoming apparent. We just
+need to learn the lessons of history and give the language enough time to gel
+into a cohesive whole composed of orthogonal parts before locking in bad design.</q>
+&mdash; Jeff Walker, The Azoth Language Designer
+
+<code><pre>
+HelloWorld.az
+public main(console: mut Console) -> void
+  => console.write_line("Hello World!");
+</pre></code>
+
 <div class="row">
     <div class="col-md-8">
-        <p class=pitch><span class="logo-name">aƶoth</span> will be a general-purpose language.</p>
+        <p class=pitch><span class="logo-name">aƶoth</span> will be a
+        general-purpose language.</p>
+        <p>Flexible, extensible, correct, and Robust.</p>
+        <p>Programming Language for Professional Programmers</p>
+        <p>Robust programming at scale</p>
+        <p>Enabling powerful libraries</p>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-8">
-        <h2>Planned Unique Features</h2>
+    <div class="col-md-6">
+        <h2>Ideal Uses</h2>
         <ul>
-            <li>reference capabilities</li>
-            <li>structured concurrency</li>
-            <li>guaranteed optimizations</li>
-            <li>asynchronous everywhere</li>
-            <li>implicit traits</li>
-            <li>compile-time code execution</li>
-            <li>optional exception specifications</li>
-            <li>design by contract</li>
+            <li><strong></strong>Concurrent and Parallel Programing</strong>:
+            structured concurrency and reference capabilities enable worry-free
+            concurrency and parallelism.</li>
+            <li><strong>Serverless Development</strong>: no startup time and
+            multiple entry points</li>
+            <li><strong>Correct and Robust Programs</strong>: design by
+            contract, error handling etc.</li>
         </ul>
     </div>
-    <div class="col-md-7">
+    <div class="col-md-6">
+        <h2>Features</h2>
+        <ul>
+            <li>Reference Capabilities: also no global mutable state</li>
+            <li>Flexible Static Typing with Local Type Inference</li>
+            <li>Write Once, Compile to Anywhere</li>
+            <li>Structured Concurrency</li>
+            <li>Instant On: no startup overhead, almost immediately executing
+            entry point function</li>
+            <li>Multiple Entry Points: enable serverless, supported by dead code
+            elimination so each entry point gives compact executable.</li>
+            <li>guaranteed optimizations</li>
+            <li>asynchronous everywhere</li>
+            <li>Implicit Interfaces</li>
+            <li>Compile-Time Code Execution: user literals (can parse), </li>
+            <li>Optional Exception Specifications</li>
+            <li>Design by Contract</li>
+            <li>Null Safety: Fix the billion dollar mistake. All references
+            non-null by default with powerful null handling and null
+            coalescing</li>
+            <li>Paradigm Fusion: enables all different paradigms in a way that
+            fits together. Fuses OO, Functional, Structured Concurrency, Lang.
+            Oriented, Procedural, into a cohesive whole. Enable DDD, first class
+            functions, default to immutable, side-effects visible</li>
+            <li>Language-Oriented Programming</li>
+            <li>term? No Special features in libraries, anything the language
+            can do, a library can do. Not primitive types, operators that only
+            apply to built in and can't be overloaded. No literals for built in
+            types.</li>
+            <li>Package Management: not just about the language, it is about the
+            package eco-system. Packages are versioned with an extension of
+            semantic versioning but that can be disabled</li>
+            <li>Unsafe Code and C Interop: unsafe is there as an escape hatch
+            but is restricted so that libraries can be trusted to be free from
+            bugs due to unnecessary unsafe code.</li>
+            <li>Compact Executables: minimal runtime - GC and green-thread
+            manager. Dead code elimination. Apps can be single executables or
+            for multiple executable can be shipped with static shared
+            libraries.</li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h2>Other Uses</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>Desktop Development</li>
+            <li>Full-stack Development: once web assembly supports GC can develop in Azoth on browser too. Concurrency features</li>
+            <li>Embedded</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h2>Powerful Libraries</h2>
+        <ul>
+            <li>Units of Measure and Quantities: underlying type and units optional generic
+            parameters. Example <code>Length</code> is <code>Length[float64,
+            m]</code>. But <code>Length[int, year]</code> or
+            <code>Length[yds]</code> and <code>Length[int, yd]</code>. Can mix
+            these types. If multiply <code>Length[yd] * Length[m]</code> the
+            result is <code>Length[yd*m]</code>. Need to do a conversion to
+            <code>Length[m^2]</code></li>
+            <li>Structured Data: VSON, JSON, YAML, BSON, structure with different parsers</li>
+            <li>Embedded Queries: SQL like query as DSL</li>
+        </ul>
     </div>
 </div>
