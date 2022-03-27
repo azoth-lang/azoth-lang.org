@@ -1,0 +1,34 @@
+---
+layout: master
+---
+<article class="post">
+
+    <header class="header">
+        <h1 class="title">{% if page.draft %}<span style="color: red;">Draft: </span>{% endif %}{{ page.title }}</h1>
+        <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    </header>
+
+    <div class="content">
+        {{ content }}
+    </div>
+
+    <div class="meta">
+        <div class="pub-line">Published: <span class="published">{{ page.date | date: "%B %-d, %Y" }}</span></div>
+        {% if page.tags != empty %}
+        <div class="topic-line">Topics: <span class="topics">
+            {% for tag in page.tags %}
+            {% assign tag_slug = tag | slugify %}
+            <a href="/topics/{{tag_slug}}/" class="internal" rel="tag">{{ tag }}</a>{% unless forloop.last %},&nbsp;{% endunless %}
+            {% endfor %}
+        </span></div>
+        {% endif %}
+    </div>
+</article>
+<div class="page-nav clearfix">
+	{% if page.next %}
+    <a href="{{ page.next.url }}" class="next internal">Next: "{{ page.next.title }}" &raquo;</a>
+	{% endif %}
+	{% if page.previous %}
+    <a href="{{ page.previous.url }}" class="previous internal">&laquo; Previous: "{{ page.previous.title }}"</a>
+	{% endif %}
+</div>

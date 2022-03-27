@@ -1,0 +1,49 @@
+---
+layout: page
+---
+<section id="blog-{{year}}" class="blog-year">
+    {% assign drafts = site.posts | where_exp: "post", "post.draft == true" %}
+    {% assign first_post = true %}
+    {% for post in drafts %}
+        {% assign post_year = post.date | date: "%Y" | to_integer %}
+        {% if post_year == page.year %}
+            {% if first_post %}<h1>{{page.year}} Drafts</h1>{% endif %}
+            {% assign post_month = post.date | date: "%B" %}
+            {% if post_month != current_month %}
+                {% unless first_post %}</section></ul>{% endunless %}
+                <section class="month">
+                    <h2>{{post_month}}</h2>
+                    <ul>
+            {% endif %}
+                        <li><a href="{{post.url}}" class="internal">{{post.title}}</a></li>
+            {% assign current_year = post_year %}
+            {% assign current_month = post_month %}
+            {% assign first_post = false %}
+        {% endif %}
+    {% endfor %}
+    {% unless first_post %}</section></ul>{% endunless %}
+
+    <h1>Year: {{page.year}}</h1>
+    {% comment %} clear out current year and month, still set from drafts loop {% endcomment %}
+    {% assign current_year = null %}
+    {% assign current_month = null %}
+    {% assign posts = site.posts | where_exp: "post", "post.draft != true" %}
+    {% assign first_post = true %}
+    {% for post in posts %}
+        {% assign post_year = post.date | date: "%Y" | to_integer %}
+        {% if post_year == page.year %}
+            {% assign post_month = post.date | date: "%B" %}
+            {% if post_month != current_month %}
+                {% unless first_post %}</section></ul>{% endunless %}
+                <section class="month">
+                    <h2>{{post_month}}</h2>
+                    <ul>
+            {% endif %}
+                        <li><a href="{{post.url}}" class="internal">{{post.title}}</a></li>
+            {% assign current_year = post_year %}
+            {% assign current_month = post_month %}
+            {% assign first_post = false %}
+        {% endif %}
+    {% endfor %}
+    {% unless first_post %}</section></ul>{% endunless %}
+</section>

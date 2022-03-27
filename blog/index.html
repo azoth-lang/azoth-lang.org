@@ -1,0 +1,20 @@
+---
+layout: master
+title: Blog
+site_title: The Azoth Programming Language
+---
+<div id="blog">
+    {% for post in paginator.posts %}
+		{% include embedded-post.html %}
+	{% endfor %}
+	<div class="page-nav clearfix">
+		{% if paginator.next_page %}
+			<a href="{{ paginator.next_page_path }}/" class="older internal">&laquo; Older</a>
+		{% endif %}
+		{% if paginator.previous_page == 1 %}
+			<a href="/blog/" class="newer">Newer »</a>
+		{% elsif paginator.previous_page %}
+			<a href="{{ paginator.previous_page_path }}/" class="newer internal">Newer &raquo;</a>
+		{% endif %}
+	</div>
+</div>

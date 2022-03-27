@@ -1,0 +1,12 @@
+<article class="post">
+
+    <header class="header">
+        <h1 class="title"><a href="{{ post.url }}" class="internal">{% if post.draft %}<span style="color: red;">Draft: </span>{% endif %}{{ post.title }}</a></h1>
+        <p class="meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+    </header>
+
+    <article class="content">
+        {{ post.content }}
+    </article>
+
+</article>

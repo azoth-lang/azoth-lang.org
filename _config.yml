@@ -9,6 +9,9 @@ url: "https://azoth-lang.org" # the base hostname & protocol for your site
 twitter_username: AzothLang
 github_username: azoth-lang
 encoding: UTF-8
+permalink: /blog/:year/:slug/
+paginate: 5
+paginate_path: "/blog/page-:num"
 repository: azoth-lang/azoth-lang.org
 
 # Build settings
@@ -16,8 +19,11 @@ markdown: kramdown
 kramdown:
   syntax_highlighter_opts:
     disable: true # disable syntax hilighting server side
-incremental: false # still experimental and seems to be causing problems
+incremental: false # jekyll-feed has a bug where it doesn't process tags correctly in incremental
 strict_front_matter: true
+
+plugins:
+  - jekyll-feed
 
 # Exclude from processing.
 exclude:
