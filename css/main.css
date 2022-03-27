@@ -142,7 +142,7 @@ pre code
     font-weight: 600;
 }
 
-.row h2
+.row.details h2
 {
     margin-top: 1rem;
 }
