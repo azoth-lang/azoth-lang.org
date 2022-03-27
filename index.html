@@ -28,15 +28,21 @@ into a cohesive whole composed of orthogonal parts before locking in bad design.
 <div class="row">
     <div class="col-md-6">
         <h2>Ideal Uses</h2>
-        <strong>Concurrent and Parallel Programing</strong>
-        <p>structured concurrency and reference capabilities enable fearless
-        concurrency and parallelism.</p>
-        <strong>Serverless Development</strong>
-        <p>no startup time and
-            multiple entry points</p>
-        <strong>Correct and Robust Programs</strong>
-        <p>design by
-            contract, error handling etc.</p>
+        <details>
+            <summary><strong>Concurrent and Parallel Programing</strong></summary>
+            <p>structured concurrency and reference capabilities enable fearless
+                concurrency and parallelism.</p>
+        </details>
+        <details>
+            <summary><strong>Serverless Development</strong></summary>
+            <p>no startup time and
+                multiple entry points</p>
+        </details>
+        <details>
+            <summary><strong>Correct and Robust Programs</strong></summary>
+            <p>design by
+                contract, error handling etc.</p>
+        </details>
     </div>
     <div class="col-md-6">
         <h2>Why Azoth?</h2>
@@ -103,89 +109,119 @@ into a cohesive whole composed of orthogonal parts before locking in bad design.
         </div>
     </div>
     <div class="col-md-6">
-        <h2>Features</h2>
-        <details>
-            <summary><strong>Paradigm Fusion</strong></summary>
-            <p>Enables all different paradigms in a way that fits together.
-            Fuses OO, Functional, Structured Concurrency, Lang. Oriented,
-            Procedural, into a cohesive whole. Enable DDD, first class
-            functions, default to immutable, side-effects visible.</p>
-        </details>
-        <details>
-            <summary><strong>Reference Capabilities</strong></summary>
-            <p>also no global mutable state</p>
-        </details>
-        <details>
-            <summary><strong>Flexible Static Typing with Local Type
-            Inference</strong></summary>
-        </details>
-        <details>
-            <summary><strong>Write Once, Compile to Anywhere</strong></summary>
-        </details>
-        <details>
-            <summary><strong>Structured Concurrency</strong></summary>
-        </details>
-        <details>
-            <summary><strong>Instant On</strong></summary>
-            <p>no startup overhead, almost immediately executing entry point
-            function</p>
-        </details>
-        <details>
-            <summary><strong>Multiple Entry Points</strong></summary>
-            <p>enable serverless, supported by dead code elimination so each
-            entry point gives compact executable.</p>
-        </details>
-        <details>
-            <summary><strong>Guaranteed Optimizations</strong></summary>
-        </details>
-        <details>
-            <summary><strong>Asynchronous Everywhere</strong></summary>
-        </details>
-        <details>
-            <summary><strong>Implicit Interfaces</strong></summary>
-        </details>
-        <details>
-            <summary><strong>Compile-Time Code Execution</strong></summary>
-            <p>user literals (can parse)</p>
-        </details>
-        <details>
-            <summary><strong>Optional Exception Specifications</strong></summary>
-        </details>
-        <details>
-            <summary><strong>Design by Contract</strong></summary>
-        </details>
-        <details>
-            <summary><strong>Null Safety</strong></summary>
-            <p>Fix the billion dollar mistake. All references non-null by
-            default with powerful null handling and null coalescing</p>
-        </details>
-        <details>
-            <summary><strong>Language-Oriented Programming</strong></summary>
-        </details>
-        <details>
-            <summary><strong>term?</strong></summary>
-            <p>No Special features in libraries, anything the language can do, a
-            library can do. Not primitive types, operators that only apply to
-            built in and can't be overloaded. No literals for built in
-            types.</p>
-        </details>
-        <details>
-            <summary><strong>Package Management</strong></summary>
-            <p>not just about the language, it is about the package eco-system.
-            Packages are versioned with an extension of semantic versioning but
-            that can be disabled</p>
-        </details>
-        <details>
-            <summary><strong>Unsafe Code and C Interop</strong></summary>
-            <p>unsafe is there as an escape hatch but is restricted so that
-            libraries can be trusted to be free from bugs due to unnecessary
-            unsafe code.</p>
-        </details>
-        <details>
-            <summary><strong>Compact Executables</strong></summary>
-            <p>minimal runtime - GC and green-thread manager. Dead code
-            elimination. Apps can be single executables or for multiple
-            executable can be shipped with static shared libraries.</p>
-        </details>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Paradigms</h2>
+                <details>
+                    <summary><strong>Structured Concurrency</strong></summary>
+                </details>
+                <details>
+                    <summary><strong>Asynchronous Everywhere</strong></summary>
+                </details>
+                <details>
+                    <summary><strong>Language-Oriented Programming</strong></summary>
+                </details>
+                <details>
+                    <summary><strong>Object-Oriented Programming</strong></summary>
+                </details>
+                <details>
+                    <summary><strong>Functional Programming</strong></summary>
+                </details>
+                <details>
+                    <summary><strong>Paradigm Fusion</strong></summary>
+                    <p>Enables all different paradigms in a way that fits together.
+                    Fuses OO, Functional, Structured Concurrency, Lang. Oriented,
+                    Procedural, into a cohesive whole. Enable DDD, first class
+                    functions, default to immutable, side-effects visible.</p>
+                </details>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Correctness Features</h2>
+                <details>
+                    <summary><strong>Flexible Static Typing with Local Inference</strong></summary>
+                </details>
+                <details>
+                    <summary><strong>Reference Capabilities</strong></summary>
+                    <p>also no global mutable state</p>
+                </details>
+                <details>
+                    <summary><strong>Null Safety</strong></summary>
+                    <p>Fix the billion dollar mistake. All references non-null by
+                    default with powerful null handling and null coalescing</p>
+                </details>
+                <details>
+                    <summary><strong>Design by Contract</strong></summary>
+                </details>
+                <details>
+                    <summary><strong>Exception Specification Inference</strong></summary>
+                </details>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Power Features</h2>
+                <details>
+                    <summary><strong>term?</strong></summary>
+                    <p>No Special features in libraries, anything the language can do, a
+                    library can do. Not primitive types, operators that only apply to
+                    built in and can't be overloaded. No literals for built in
+                    types.</p>
+                </details>
+                <details>
+                    <summary><strong>Compile-Time Code Execution</strong></summary>
+                    <p>user literals (can parse)</p>
+                </details>
+                <details>
+                    <summary><strong>Implicit Interfaces</strong></summary>
+                </details>
+                <details>
+                    <summary><strong>Named Constructors</strong></summary>
+                    <p>Constructors have optional names</p>
+                </details>
+                <details>
+                    <summary><strong>Write Once, Compile to Anywhere</strong></summary>
+                </details>
+                <details>
+                    <summary><strong>Package Management</strong></summary>
+                    <p>not just about the language, it is about the package eco-system.
+                    Packages are versioned with an extension of semantic versioning but
+                    that can be disabled</p>
+                </details>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Performance Features</h2>
+                <details>
+                    <summary><strong>Instant On</strong></summary>
+                    <p>no startup overhead, almost immediately executing entry
+                    point function</p>
+                </details>
+                <details>
+                    <summary><strong>Multiple Entry Points</strong></summary>
+                    <p>enable serverless, supported by dead code elimination so
+                    each entry point gives compact executable.</p>
+                </details>
+                <details>
+                    <summary><strong>Guaranteed Optimizations</strong></summary>
+                </details>
+                <details>
+                    <summary><strong>Unsafe Code and C Interop</strong></summary>
+                    <p>unsafe is there as an escape hatch but is restricted so
+                    that libraries can be trusted to be free from bugs due to
+                    unnecessary unsafe code.</p>
+                </details>
+                <details>
+                    <summary><strong>Compact Executables</strong></summary>
+                    <p>minimal runtime - GC and green-thread manager. Dead code
+                    elimination. Apps can be single executables or for multiple
+                    executable can be shipped with static shared libraries.</p>
+                </details>
+                <details>
+                    <summary><strong>Mirrors for Reflection</strong></summary>
+                </details>
+            </div>
     </div>
 </div>
