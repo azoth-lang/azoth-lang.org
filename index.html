@@ -1,7 +1,7 @@
 ---
 layout: master
 ---
-<pre><code class="nohighlight hljs">HelloWorld.az
+<pre><code class="nohighlight hljs"><span class="hljs-comment">// HelloWorld.az</span>
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">fn</span> <span class="hljs-title function_">main</span>(<span class="hljs-params">console: <span class="hljs-keyword">mut</span> <span class="hljs-type">Console</span></span>)
   <span class="hljs-operator">=></span> console.write_line(<span class="hljs-string">"Hello World!"</span>);
 </code></pre>
@@ -36,10 +36,6 @@ layout: master
     <div class="col-md-6">
         <h2>Why Azoth?</h2>
         <details>
-            <summary><strong>No More Null Reference Errors</strong></summary>
-            <p></p>
-        </details>
-        <details>
             <summary><strong>No Limits</strong></summary>
             <p></p>
         </details>
@@ -49,6 +45,10 @@ layout: master
         </details>
         <details>
             <summary><strong>Fearless Concurrency</strong></summary>
+            <p></p>
+        </details>
+        <details>
+            <summary><strong>No More Null Reference Errors</strong></summary>
             <p></p>
         </details>
     </div>
@@ -141,10 +141,10 @@ layout: master
                     default with powerful null handling and null coalescing</p>
                 </details>
                 <details>
-                    <summary><strong>Design by Contract</strong></summary>
+                    <summary><strong>Exception Specification Inference</strong></summary>
                 </details>
                 <details>
-                    <summary><strong>Exception Specification Inference</strong></summary>
+                    <summary><strong>Design by Contract</strong></summary>
                 </details>
             </div>
         </div>
@@ -197,12 +197,6 @@ layout: master
                     <summary><strong>Guaranteed Optimizations</strong></summary>
                 </details>
                 <details>
-                    <summary><strong>Unsafe Code and C Interop</strong></summary>
-                    <p>unsafe is there as an escape hatch but is restricted so
-                    that libraries can be trusted to be free from bugs due to
-                    unnecessary unsafe code.</p>
-                </details>
-                <details>
                     <summary><strong>Compact Executables</strong></summary>
                     <p>minimal runtime - GC and green-thread manager. Dead code
                     elimination. Apps can be single executables or for multiple
@@ -210,6 +204,12 @@ layout: master
                 </details>
                 <details>
                     <summary><strong>Mirrors for Reflection</strong></summary>
+                </details>
+                <details>
+                    <summary><strong>Unsafe Code and C Interop</strong></summary>
+                    <p>unsafe is there as an escape hatch but is restricted so
+                    that libraries can be trusted to be free from bugs due to
+                    unnecessary unsafe code.</p>
                 </details>
             </div>
     </div>
