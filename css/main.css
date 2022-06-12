@@ -142,9 +142,10 @@ pre code
     font-weight: 600;
 }
 
-.row.details h2
+/* Hack to add some space after the arrow */
+summary strong
 {
-    margin-top: 1rem;
+    padding-left: 0.2ex;
 }
 
 .site-footer
